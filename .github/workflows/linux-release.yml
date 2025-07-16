@@ -8,10 +8,13 @@ on:
       name:
         description: 'reason'
         required: false
+  push:
+    tags:
+      - '*'
+      - '!*-alpha*'
 jobs:
   release:
     runs-on: ubuntu-latest
-    container: golang:1.18-alpine  # 改用 Alpine 镜像
     steps:
       - name: Checkout
         uses: actions/checkout@v3
