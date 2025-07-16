@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
       - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 16
+          bun-version: latest
       - name: Build Frontend
         env:
           CI: ""
